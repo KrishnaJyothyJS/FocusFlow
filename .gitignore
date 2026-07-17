@@ -1,0 +1,20 @@
+# Node Dependencies
+node_modules/
+
+# VS Code Extension compilation output
+out/
+dist/
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# VS Code Workspace settings (keeps personal IDE settings local)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Logs
+*.log
