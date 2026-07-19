@@ -1,24 +1,40 @@
 {
   "name": "focusflow",
+  "displayName": "FocusFlow",
+  "description": "A cognitive accessibility engine for neurodivergent developers.",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "focusflow.openDashboard",
+        "title": "FocusFlow: Open Dashboard",
+        "category": "FocusFlow"
+      },
+      {
+        "command": "focusflow.resetWorkspace",
+        "title": "FocusFlow: Reset Environment Defaults",
+        "category": "FocusFlow"
+      }
+    ]
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KrishnaJyothyJS/FocusFlow.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/KrishnaJyothyJS/FocusFlow/issues"
-  },
-  "homepage": "https://github.com/KrishnaJyothyJS/FocusFlow#readme",
-  "dependencies": {
-    "@types/vscode": "^1.125.0"
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "typescript": "^5.1.3"
   }
 }
