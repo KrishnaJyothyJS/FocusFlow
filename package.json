@@ -1,0 +1,24 @@
+{
+  "name": "focusflow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KrishnaJyothyJS/FocusFlow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/KrishnaJyothyJS/FocusFlow/issues"
+  },
+  "homepage": "https://github.com/KrishnaJyothyJS/FocusFlow#readme",
+  "dependencies": {
+    "@types/vscode": "^1.125.0"
+  }
+}
