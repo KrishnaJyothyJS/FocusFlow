@@ -25,12 +25,12 @@ export class ProfileManager {
     public static async activateHyperFocus() {
         await this.clearAllOverrides();
         
-        // ADHD: Remove UI noise
+        // ADHD: Remove UI noise by modifying core settings
         await this.backupAndSet('workbench.activityBar.visible', false);
         await this.backupAndSet('editor.minimap.enabled', false);
         await this.backupAndSet('workbench.statusBar.visible', false);
         
-        // Collapse sidebar explorer programmatically
+        // Forcefully collapse the sidebar explorer programmatically
         await vscode.commands.executeCommand('workbench.action.closeSidebar');
     }
 
@@ -67,6 +67,7 @@ export class ProfileManager {
             warningColor = "#00FFFF";
         }
 
+        // Colorblind Maps: Override error/warning squiggles
         await this.backupAndSet('workbench.colorCustomizations', {
             "editorError.foreground": errorColor,
             "editorWarning.foreground": warningColor,
